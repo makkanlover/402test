@@ -1,0 +1,19 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#f1f5f9"/>
+  <rect x="20" y="20" width="760" height="50" rx="8" fill="#3b82f6"/>
+  <text x="40" y="52" fill="white" font-family="system-ui" font-size="20">x402 決済プラットフォーム</text>
+  <rect x="20" y="90" width="240" height="180" rx="8" fill="white" stroke="#e2e8f0"/>
+  <rect x="30" y="100" width="220" height="100" rx="4" fill="#e2e8f0"/>
+  <text x="100" y="230" fill="#64748b" font-family="system-ui" font-size="14">商品カード</text>
+  <text x="100" y="255" fill="#3b82f6" font-family="system-ui" font-size="12">0.00001 AVAX</text>
+  <rect x="280" y="90" width="240" height="180" rx="8" fill="white" stroke="#e2e8f0"/>
+  <rect x="290" y="100" width="220" height="100" rx="4" fill="#e2e8f0"/>
+  <text x="360" y="230" fill="#64748b" font-family="system-ui" font-size="14">商品カード</text>
+  <text x="360" y="255" fill="#3b82f6" font-family="system-ui" font-size="12">0.00001 AVAX</text>
+  <rect x="540" y="90" width="240" height="180" rx="8" fill="white" stroke="#e2e8f0"/>
+  <rect x="550" y="100" width="220" height="100" rx="4" fill="#e2e8f0"/>
+  <text x="620" y="230" fill="#64748b" font-family="system-ui" font-size="14">商品カード</text>
+  <text x="620" y="255" fill="#3b82f6" font-family="system-ui" font-size="12">0.00001 AVAX</text>
+  <text x="400" y="380" text-anchor="middle" fill="#94a3b8" font-family="system-ui" font-size="16">※ 実際の画面イメージ</text>
+  <text x="400" y="410" text-anchor="middle" fill="#94a3b8" font-family="system-ui" font-size="14">スクリーンショットは本番環境で撮影してください</text>
+</svg>

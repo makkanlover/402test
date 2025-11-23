@@ -1,0 +1,53 @@
+---
+title: x402 ユーザーガイド
+description: x402決済プラットフォームの使い方ガイド
+template: splash
+hero:
+  tagline: ブロックチェーンの複雑さを隠した、シンプルなデジタルコンテンツ決済
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: はじめる
+      link: /guides/introduction/
+      icon: right-arrow
+    - text: クイックスタート
+      link: /guides/quickstart/
+      icon: rocket
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 主な機能
+
+<CardGrid stagger>
+  <Card title="シンプルな購入体験" icon="seti:salesforce">
+    ブロックチェーンの知識不要。通常のオンラインショッピングと同じ感覚で購入できます。
+  </Card>
+  <Card title="パスキー認証" icon="approve-check">
+    パスワード不要。指紋認証や顔認証で安全・簡単にログイン。
+  </Card>
+  <Card title="即時アクセス" icon="rocket">
+    購入完了と同時にコンテンツへアクセス。待ち時間なし。
+  </Card>
+  <Card title="透明な取引" icon="document">
+    すべての取引はブロックチェーン上に記録。いつでも確認可能。
+  </Card>
+</CardGrid>
+
+## クイックリンク
+
+<CardGrid>
+  <Card title="商品を閲覧する" icon="magnifier">
+    [商品一覧の見方を確認](/usecases/browse-products/)
+  </Card>
+  <Card title="商品を購入する" icon="star">
+    [購入フローの詳細](/usecases/purchase/)
+  </Card>
+  <Card title="購入履歴を確認" icon="list-format">
+    [履歴の確認方法](/usecases/history/)
+  </Card>
+  <Card title="よくある質問" icon="information">
+    [FAQ](/faq/general/)
+  </Card>
+</CardGrid>

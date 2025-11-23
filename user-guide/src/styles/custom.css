@@ -1,0 +1,60 @@
+/* x402 ユーザーガイド カスタムスタイル */
+
+:root {
+  --sl-color-accent-low: #1e40af;
+  --sl-color-accent: #3b82f6;
+  --sl-color-accent-high: #93c5fd;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f8fafc;
+  --sl-color-gray-2: #e2e8f0;
+  --sl-color-gray-3: #cbd5e1;
+  --sl-color-gray-4: #94a3b8;
+  --sl-color-gray-5: #64748b;
+  --sl-color-gray-6: #475569;
+  --sl-color-black: #1e293b;
+}
+
+/* スクリーンショット用スタイル */
+.screenshot {
+  border: 1px solid var(--sl-color-gray-3);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+.screenshot img {
+  border-radius: 8px;
+}
+
+/* 手順番号スタイル */
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--sl-color-accent);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* 注意書きスタイル */
+.note-box {
+  background: var(--sl-color-gray-1);
+  border-left: 4px solid var(--sl-color-accent);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ボタン説明スタイル */
+.button-desc {
+  display: inline-block;
+  background: var(--sl-color-accent);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
