@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "status": "completed",
+  "currentPlan": {
+    "goal": "パスキー認証時のクロスデバイス（スマホ認証）対応",
+    "phases": [
+      {
+        "id": "phase-1",
+        "name": "transports対応実装",
+        "status": "completed",
+        "tasks": ["task-201"]
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "task-201",
+      "description": "パスキーのtransports保存・使用対応",
+      "agent": "pioneer",
+      "status": "completed",
+      "dependencies": [],
+      "files": [
+        "prisma/schema.prisma",
+        "src/lib/auth.ts"
+      ],
+      "completedAt": "2025-11-23T01:00:00Z",
+      "changes": [
+        "Passkey モデルに transports フィールド追加",
+        "verifyPasskeyRegistration で transports を保存",
+        "generatePasskeyAuthenticationOptions で transports を使用",
+        "Prisma DB同期完了"
+      ]
+    }
+  ],
+  "completedTasks": ["task-201"],
+  "activeAgents": []
+}

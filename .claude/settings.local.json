@@ -1,0 +1,48 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(ls:*)",
+      "Bash(tree:*)",
+      "Bash(mv:*)",
+      "Bash(cp:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(echo:*)",
+      "Bash(do)",
+      "Bash(then)",
+      "Bash(else)",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(for:*)",
+      "Bash(npm :*)",
+      "Bash(npm ls:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(npx prisma db push:*)",
+      "Bash(npx tsx:*)",
+      "Bash(npm create:*)",
+      "Bash(dir /s /b \"C:\\Users\\aoyat\\Downloads\\402test\\user-guide\\src\\content\")",
+      "Bash(dir:*)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run lint)",
+      "Bash(npx eslint:*)",
+      "Bash(node -e:*)",
+      "WebSearch"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)"
+    ],
+    "ask": []
+  }
+}
