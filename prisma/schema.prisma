@@ -1,0 +1,108 @@
+// Prismaスキーマ - x402決済プラットフォーム
+// データベース：SQLite（MVP用）
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ユーザーテーブル
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // リレーション
+  passkeys      Passkey[]
+  payments      Payment[]
+  productAccess ProductAccess[]
+  sessions      Session[]
+}
+
+// パスキー（WebAuthn）テーブル
+model Passkey {
+  id           String   @id @default(uuid())
+  userId       String
+  credentialId String   @unique
+  publicKey    String
+  counter      BigInt   @default(0)
+  transports   String?  // カンマ区切りで保存（例: "internal,hybrid"）
+  createdAt    DateTime @default(now())
+  lastUsedAt   DateTime?
+
+  // リレーション
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// セッションテーブル
+model Session {
+  id        String   @id @default(uuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  // リレーション
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// 商品テーブル
+model Product {
+  id           String   @id @default(uuid())
+  name         String
+  description  String?
+  price        Float
+  currency     String   @default("AVAX")
+  type         String   // article, image, music, video
+  contentUrl   String?
+  thumbnailUrl String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // リレーション
+  payments      Payment[]
+  productAccess ProductAccess[]
+}
+
+// 決済テーブル
+model Payment {
+  id              String    @id @default(uuid())
+  paymentId       String    @unique
+  userId          String
+  productId       String
+  amount          Float
+  currency        String    @default("AVAX")
+  status          String    // pending, processing, completed, failed
+  paymentMethod   String?
+  chainId         Int?
+  transactionHash String?
+  confirmedAt     DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // リレーション
+  user    User    @relation(fields: [userId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
+}
+
+// 商品アクセス権テーブル
+model ProductAccess {
+  id        String   @id @default(uuid())
+  userId    String
+  productId String
+  paymentId String?
+  grantedAt DateTime @default(now())
+
+  // リレーション
+  user    User    @relation(fields: [userId], references: [id])
+  product Product @relation(fields: [productId], references: [id])
+
+  // ユニーク制約
+  @@unique([userId, productId])
+}
